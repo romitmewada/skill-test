@@ -13,10 +13,21 @@ class ProductListViewController: UITableViewController {
 	var category : Categories?
 	var products : [Product] = [];
 
+	@IBOutlet weak var headerView : UIView?
+	@IBOutlet weak var collectionView : SubCategories?
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
 		self.title = category?.name
+
+		if(self.category?.child_categories?.count == 0)
+		{
+			self.tableView.contentInset = UIEdgeInsets.init(top: -(self.headerView?.frame.height)!, left: 0, bottom: 0, right: 0)
+		}
+
+		self.collectionView?.categoryDelegate = self
+		self.collectionView?.category = self.category
 
 		self.loadData()
     }
@@ -55,6 +66,16 @@ extension ProductListViewController
 
 		let viewController : ProductDetailViewController = self.storyboard?.instantiateViewController(withIdentifier: "productDetailViewController") as! ProductDetailViewController
 		viewController.product = self.products[indexPath.row];
+		self.navigationController?.pushViewController(viewController, animated: true)
+	}
+}
+
+extension ProductListViewController : SubCategoriesDelegate
+{
+	func didSelectAtSubCategory(category: Categories) {
+
+		let viewController : ProductListViewController = self.storyboard?.instantiateViewController(withIdentifier: "productListViewController") as! ProductListViewController
+		viewController.category = category;
 		self.navigationController?.pushViewController(viewController, animated: true)
 	}
 }

@@ -13,6 +13,15 @@ class ViewController: UIViewController {
 	override func viewDidLoad() {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view.
+
+		WebService.requestJSONData(responseHandler: { (response) in
+
+			print(response)
+			
+		}) { (error) in
+
+			print(error)
+		}
 	}
 
 

@@ -16,6 +16,7 @@
 		D573DD162430745100A861CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D573DD142430745100A861CF /* LaunchScreen.storyboard */; };
 		D573DD222430767D00A861CF /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D573DD212430767D00A861CF /* WebService.swift */; };
 		D573DD242430769500A861CF /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D573DD232430769500A861CF /* Constant.swift */; };
+		D573DD272430792200A861CF /* OfflineData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D573DD252430792200A861CF /* OfflineData.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		D573DD172430745100A861CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D573DD212430767D00A861CF /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		D573DD232430769500A861CF /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		D573DD262430792200A861CF /* OfflineData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = OfflineData.xcdatamodel; sourceTree = "<group>"; };
 		F9255DA52F2DEFDE2D599C35 /* Pods-Heady - Skill Assessment Test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Heady - Skill Assessment Test.debug.xcconfig"; path = "Target Support Files/Pods-Heady - Skill Assessment Test/Pods-Heady - Skill Assessment Test.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -89,6 +91,7 @@
 				D573DD1D2430765000A861CF /* ViewControllers */,
 				D573DD1F2430766500A861CF /* UI */,
 				D573DD122430745100A861CF /* Assets.xcassets */,
+				D573DD252430792200A861CF /* OfflineData.xcdatamodeld */,
 				D573DD172430745100A861CF /* Info.plist */,
 			);
 			path = "Heady - Skill Assessment Test";
@@ -247,6 +250,7 @@
 				D573DD0E2430745000A861CF /* ViewController.swift in Sources */,
 				D573DD0A2430745000A861CF /* AppDelegate.swift in Sources */,
 				D573DD242430769500A861CF /* Constant.swift in Sources */,
+				D573DD272430792200A861CF /* OfflineData.xcdatamodeld in Sources */,
 				D573DD222430767D00A861CF /* WebService.swift in Sources */,
 				D573DD0C2430745000A861CF /* SceneDelegate.swift in Sources */,
 			);
@@ -448,6 +452,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D573DD252430792200A861CF /* OfflineData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D573DD262430792200A861CF /* OfflineData.xcdatamodel */,
+			);
+			currentVersion = D573DD262430792200A861CF /* OfflineData.xcdatamodel */;
+			name = OfflineData.xcdatamodeld;
+			path = "../../Ecommerce Example/Ecommerce Example/OfflineData.xcdatamodeld";
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = D573DCFE2430745000A861CF /* Project object */;
 }

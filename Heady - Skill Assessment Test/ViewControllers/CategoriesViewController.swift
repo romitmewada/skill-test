@@ -17,6 +17,8 @@ class CategoriesViewController: UITableViewController {
 		super.viewDidLoad()
 		// Do any additional setup after loading the view.
 
+		self.title = "Categories"
+
 		WebService.requestJSONData(responseHandler: { (response) in
 
 			self.loadData();
@@ -55,5 +57,8 @@ extension CategoriesViewController
 
 	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
+		let viewController : ProductListViewController = self.storyboard?.instantiateViewController(withIdentifier: "productListViewController") as! ProductListViewController
+		viewController.category = self.categoryArray[indexPath.row];
+		self.navigationController?.pushViewController(viewController, animated: true)
 	}
 }

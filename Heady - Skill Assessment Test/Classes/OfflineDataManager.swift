@@ -105,6 +105,22 @@ open class OfflineDataManager: NSObject {
         }
 	}
 
+	func retrieveProductsByRank() -> [Popular]? {
+        guard let managedContext = getContext() else { return nil }
+        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Popular")
+//		fetchRequest.predicate = NSPredicate(format: "category_id == %d", category_id)
+
+        do {
+            let result = try managedContext.fetch(fetchRequest)
+			return (result as! [Popular]);
+
+        } catch {
+
+            print("Failed")
+			return nil
+        }
+	}
+
 	func save(object : [String : Any])
 	{
 		let context = persistentContainer.viewContext
@@ -134,6 +150,52 @@ open class OfflineDataManager: NSObject {
 		} catch let error as NSError {
 			print("Could not save. \(error), \(error.userInfo)")
 		}
+	}
+
+	func saveRanking(object : [String : Any])
+	{
+		let context = persistentContainer.viewContext
+
+        do {
+			let fetchRequest:NSFetchRequest<NSFetchRequestResult> = NSFetchRequest.init(entityName: "Popular")
+			fetchRequest.predicate = NSPredicate(format: "ranking = %@", object["ranking"] as! String)
+
+			let oldObject = try context.fetch(fetchRequest)
+			if(oldObject.count > 0)
+			{
+				let popular = oldObject.first as? Popular
+				try! popular?.update(with: object)
+                try context.save()
+			}
+			else {
+
+				let entity = NSEntityDescription.entity(forEntityName: "Popular", in: context)!
+
+				let popular = NSManagedObject(entity: entity, insertInto: context) as? Popular
+				try! popular?.update(with: object)
+				if(popular!.hasChanges)
+				{
+					try context.save()
+				}
+			}
+		} catch let error as NSError {
+			print("Could not save. \(error), \(error.userInfo)")
+		}
+	}
+
+}
+
+extension Popular
+{
+	func update(with jsonDictionary: [String: Any]) throws {
+        guard let ranking = jsonDictionary["ranking"] as? String,
+            let products = jsonDictionary["products"] as? NSArray
+            else {
+                throw NSError(domain: "", code: 100, userInfo: nil)
+        }
+
+		self.ranking = ranking
+		self.products = products
 	}
 }
 

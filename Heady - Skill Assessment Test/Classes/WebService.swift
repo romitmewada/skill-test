@@ -29,6 +29,14 @@ class WebService: NSObject {
 						}
 					}
 
+					if let rankings : [[String : Any]]  = json!["rankings"] as? [[String : Any]]
+					{
+						for ranking in rankings
+						{
+							OfflineDataManager.sharedInstance.saveRanking(object: ranking)
+						}
+					}
+
 					DispatchQueue.main.async {
 						responseHandler(json!);
 					}

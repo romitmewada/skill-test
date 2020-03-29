@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9BA505FEFB2F84889CDE6581 /* Pods_Heady___Skill_Assessment_Test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0372B2C3DF5D019FF2EA62FD /* Pods_Heady___Skill_Assessment_Test.framework */; };
+		D564B1BF2430923400F5DF15 /* OfflineData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D564B1BD2430923400F5DF15 /* OfflineData.xcdatamodeld */; };
 		D573DD0A2430745000A861CF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D573DD092430745000A861CF /* AppDelegate.swift */; };
 		D573DD0C2430745000A861CF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D573DD0B2430745000A861CF /* SceneDelegate.swift */; };
 		D573DD0E2430745000A861CF /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D573DD0D2430745000A861CF /* CategoriesViewController.swift */; };
@@ -16,16 +17,17 @@
 		D573DD162430745100A861CF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D573DD142430745100A861CF /* LaunchScreen.storyboard */; };
 		D573DD222430767D00A861CF /* WebService.swift in Sources */ = {isa = PBXBuildFile; fileRef = D573DD212430767D00A861CF /* WebService.swift */; };
 		D573DD242430769500A861CF /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = D573DD232430769500A861CF /* Constant.swift */; };
-		D573DD272430792200A861CF /* OfflineData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D573DD252430792200A861CF /* OfflineData.xcdatamodeld */; };
 		D573DD2924307A7E00A861CF /* OfflineDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D573DD2824307A7E00A861CF /* OfflineDataManager.swift */; };
 		D573DD2B2430819100A861CF /* ProductListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D573DD2A2430819100A861CF /* ProductListViewController.swift */; };
 		D573DD2D2430846100A861CF /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D573DD2C2430846100A861CF /* ProductDetailViewController.swift */; };
 		D573DD2F243087BF00A861CF /* SubCategories.swift in Sources */ = {isa = PBXBuildFile; fileRef = D573DD2E243087BF00A861CF /* SubCategories.swift */; };
+		D573DD3124308F3C00A861CF /* PopularViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D573DD3024308F3C00A861CF /* PopularViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0372B2C3DF5D019FF2EA62FD /* Pods_Heady___Skill_Assessment_Test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = "Pods_Heady___Skill_Assessment_Test.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3B7C5489E13DE343EF1843E /* Pods-Heady - Skill Assessment Test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Heady - Skill Assessment Test.release.xcconfig"; path = "Target Support Files/Pods-Heady - Skill Assessment Test/Pods-Heady - Skill Assessment Test.release.xcconfig"; sourceTree = "<group>"; };
+		D564B1BE2430923400F5DF15 /* OfflineData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = OfflineData.xcdatamodel; sourceTree = "<group>"; };
 		D573DD062430745000A861CF /* Heady - Skill Assessment Test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Heady - Skill Assessment Test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D573DD092430745000A861CF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D573DD0B2430745000A861CF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -36,11 +38,11 @@
 		D573DD172430745100A861CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D573DD212430767D00A861CF /* WebService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebService.swift; sourceTree = "<group>"; };
 		D573DD232430769500A861CF /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
-		D573DD262430792200A861CF /* OfflineData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = OfflineData.xcdatamodel; sourceTree = "<group>"; };
 		D573DD2824307A7E00A861CF /* OfflineDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OfflineDataManager.swift; path = Classes/OfflineDataManager.swift; sourceTree = "<group>"; };
 		D573DD2A2430819100A861CF /* ProductListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewController.swift; sourceTree = "<group>"; };
 		D573DD2C2430846100A861CF /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
 		D573DD2E243087BF00A861CF /* SubCategories.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubCategories.swift; sourceTree = "<group>"; };
+		D573DD3024308F3C00A861CF /* PopularViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopularViewController.swift; sourceTree = "<group>"; };
 		F9255DA52F2DEFDE2D599C35 /* Pods-Heady - Skill Assessment Test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Heady - Skill Assessment Test.debug.xcconfig"; path = "Target Support Files/Pods-Heady - Skill Assessment Test/Pods-Heady - Skill Assessment Test.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -99,7 +101,7 @@
 				D573DD1D2430765000A861CF /* ViewControllers */,
 				D573DD1F2430766500A861CF /* UI */,
 				D573DD122430745100A861CF /* Assets.xcassets */,
-				D573DD252430792200A861CF /* OfflineData.xcdatamodeld */,
+				D564B1BD2430923400F5DF15 /* OfflineData.xcdatamodeld */,
 				D573DD2824307A7E00A861CF /* OfflineDataManager.swift */,
 				D573DD172430745100A861CF /* Info.plist */,
 			);
@@ -112,6 +114,7 @@
 				D573DD0D2430745000A861CF /* CategoriesViewController.swift */,
 				D573DD2A2430819100A861CF /* ProductListViewController.swift */,
 				D573DD2C2430846100A861CF /* ProductDetailViewController.swift */,
+				D573DD3024308F3C00A861CF /* PopularViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -263,10 +266,11 @@
 				D573DD0A2430745000A861CF /* AppDelegate.swift in Sources */,
 				D573DD2D2430846100A861CF /* ProductDetailViewController.swift in Sources */,
 				D573DD242430769500A861CF /* Constant.swift in Sources */,
-				D573DD272430792200A861CF /* OfflineData.xcdatamodeld in Sources */,
 				D573DD222430767D00A861CF /* WebService.swift in Sources */,
 				D573DD2F243087BF00A861CF /* SubCategories.swift in Sources */,
 				D573DD0C2430745000A861CF /* SceneDelegate.swift in Sources */,
+				D564B1BF2430923400F5DF15 /* OfflineData.xcdatamodeld in Sources */,
+				D573DD3124308F3C00A861CF /* PopularViewController.swift in Sources */,
 				D573DD2B2430819100A861CF /* ProductListViewController.swift in Sources */,
 				D573DD2924307A7E00A861CF /* OfflineDataManager.swift in Sources */,
 			);
@@ -470,14 +474,13 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		D573DD252430792200A861CF /* OfflineData.xcdatamodeld */ = {
+		D564B1BD2430923400F5DF15 /* OfflineData.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				D573DD262430792200A861CF /* OfflineData.xcdatamodel */,
+				D564B1BE2430923400F5DF15 /* OfflineData.xcdatamodel */,
 			);
-			currentVersion = D573DD262430792200A861CF /* OfflineData.xcdatamodel */;
-			name = OfflineData.xcdatamodeld;
-			path = "../../Ecommerce Example/Ecommerce Example/OfflineData.xcdatamodeld";
+			currentVersion = D564B1BE2430923400F5DF15 /* OfflineData.xcdatamodel */;
+			path = OfflineData.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

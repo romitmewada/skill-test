@@ -33,7 +33,35 @@ class PopularViewController: UITableViewController {
 
 				if let value : [[String : Any]] = self.popular![self.selectedIndex].products as? [[String : Any]]
 				{
-					self.selectedArray = value
+					self.selectedArray = value.sorted(by: { (ob1 : [String : Any], ob2 : [String : Any]) -> Bool in
+
+						var count1 : Int = 0 //(ob1["view_count"] as? Int)!
+						var count2 : Int = 0 //(ob2["view_count"] as? Int)!
+
+						if let _ = ob1["view_count"] {
+
+							count1 = (ob1["view_count"] as? Int)!
+							count2 = (ob2["view_count"] as? Int)!
+						}
+
+						if let _ = ob1["order_count"] {
+
+							count1 = (ob1["order_count"] as? Int)!
+							count2 = (ob2["order_count"] as? Int)!
+						}
+
+						if let _ = ob1["shares"] {
+
+							count1 = (ob1["shares"] as? Int)!
+							count2 = (ob2["shares"] as? Int)!
+						}
+
+						if(count1 > count2)
+						{
+							return true
+						}
+						return false
+					})
 				}
 				self.tableView.reloadData();
 			}

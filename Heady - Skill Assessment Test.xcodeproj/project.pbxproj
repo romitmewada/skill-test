@@ -19,6 +19,7 @@
 		D573DD272430792200A861CF /* OfflineData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D573DD252430792200A861CF /* OfflineData.xcdatamodeld */; };
 		D573DD2924307A7E00A861CF /* OfflineDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = D573DD2824307A7E00A861CF /* OfflineDataManager.swift */; };
 		D573DD2B2430819100A861CF /* ProductListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D573DD2A2430819100A861CF /* ProductListViewController.swift */; };
+		D573DD2D2430846100A861CF /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D573DD2C2430846100A861CF /* ProductDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		D573DD262430792200A861CF /* OfflineData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = OfflineData.xcdatamodel; sourceTree = "<group>"; };
 		D573DD2824307A7E00A861CF /* OfflineDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = OfflineDataManager.swift; path = Classes/OfflineDataManager.swift; sourceTree = "<group>"; };
 		D573DD2A2430819100A861CF /* ProductListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductListViewController.swift; sourceTree = "<group>"; };
+		D573DD2C2430846100A861CF /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
 		F9255DA52F2DEFDE2D599C35 /* Pods-Heady - Skill Assessment Test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Heady - Skill Assessment Test.debug.xcconfig"; path = "Target Support Files/Pods-Heady - Skill Assessment Test/Pods-Heady - Skill Assessment Test.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -107,6 +109,7 @@
 			children = (
 				D573DD0D2430745000A861CF /* CategoriesViewController.swift */,
 				D573DD2A2430819100A861CF /* ProductListViewController.swift */,
+				D573DD2C2430846100A861CF /* ProductDetailViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -255,6 +258,7 @@
 			files = (
 				D573DD0E2430745000A861CF /* CategoriesViewController.swift in Sources */,
 				D573DD0A2430745000A861CF /* AppDelegate.swift in Sources */,
+				D573DD2D2430846100A861CF /* ProductDetailViewController.swift in Sources */,
 				D573DD242430769500A861CF /* Constant.swift in Sources */,
 				D573DD272430792200A861CF /* OfflineData.xcdatamodeld in Sources */,
 				D573DD222430767D00A861CF /* WebService.swift in Sources */,

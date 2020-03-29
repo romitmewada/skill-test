@@ -6,7 +6,6 @@
 //  Copyright © 2020 Romit. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 class ProductListViewController: UITableViewController {
@@ -54,6 +53,8 @@ extension ProductListViewController
 
 	override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
+		let viewController : ProductDetailViewController = self.storyboard?.instantiateViewController(withIdentifier: "productDetailViewController") as! ProductDetailViewController
+		viewController.product = self.products[indexPath.row];
+		self.navigationController?.pushViewController(viewController, animated: true)
 	}
 }
-

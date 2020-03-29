@@ -20,7 +20,15 @@ class WebService: NSObject {
 
 				do{
 					let json = try JSONSerialization.jsonObject(with: response.data!, options: []) as? [String : Any]
-					
+
+					if let categories : [[String : Any]]  = json!["categories"] as? [[String : Any]]
+					{
+						for category in categories
+						{
+							OfflineDataManager.sharedInstance.save(object: category)
+						}
+					}
+
 					DispatchQueue.main.async {
 						responseHandler(json!);
 					}
